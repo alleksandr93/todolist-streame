@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
     return (
-        <div className="App">
+        <div className="app">
             <div>
                 <h3>What to learn</h3>
                 <div>
@@ -15,7 +15,7 @@ function App() {
                     <li><input type="checkbox" checked={true}/> <span>JS</span></li>
                     <li><input type="checkbox" checked={false}/> <span>React</span></li>
                 </ul>
-                <div>
+                <div className='buttons'>
                     <button>All</button>
                     <button>Active</button>
                     <button>Completed</button>
