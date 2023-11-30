@@ -3,8 +3,9 @@ import React from 'react';
 type PropsType = {
     truck: string
     tasks: TaskType[]
+    deleteTask: (id: number) => void
 }
-type TaskType = {
+export type TaskType = {
     id: number
     title: string
     isDone: boolean
@@ -14,7 +15,7 @@ export const Todolist = (props: PropsType) => {
         <div className="todolist">
             <h3>{props.truck}</h3>
             <div>
-                <input/>
+                <input />
                 <button>+</button>
             </div>
             <ul>
@@ -22,7 +23,8 @@ export const Todolist = (props: PropsType) => {
                     // Пишем желательно такой избыточный синтаксис чтобы в случае чего debugger применять
                     return (
                         <li key={el.id}>
-                            <input type="checkbox" checked={el.isDone}/>
+                            <button onClick={() => props.deleteTask(el.id)}>Delete</button>
+                            <input type="checkbox" checked={el.isDone} />
                             <span>{el.title}</span>
                         </li>
                     )
@@ -33,7 +35,7 @@ export const Todolist = (props: PropsType) => {
                 <button>Active</button>
                 <button>Completed</button>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -11,7 +11,7 @@ body {
     gap: 10px;
     justify-content: center;
     position: absolute;
-    right: 30%;
+    right: 40%;
     top: 30%;
 }
 
@@ -29,4 +29,18 @@ body {
 h3 {
     text-align: center;
     text-shadow: 1px 1px #b3beb1;
+}
+
+ul>li>button{
+   margin: 0 0 0 5px;
+background-color: aqua;
+border-radius: 5px;
+border: aqua;
+}
+ul>li>button:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+ul{
+    list-style-type:none;
 }
